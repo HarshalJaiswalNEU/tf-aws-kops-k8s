@@ -18,7 +18,7 @@ export node_count="3"
 export node_size="t2.small"
 export node_volume="25"
 export kubernetes_version="1.22.15"
-export Public_Key="~/.ssh/kOps.pub"
+export public_key="~/.ssh/kOps.pub"
 export AWS_PROFILE=root
 export AWS_REGION=us-east-1
 ```
