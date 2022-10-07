@@ -8,7 +8,11 @@
 ## Environment variables we must export before launching our Kubernetes cluster
 ```shell
 export kOps_cluster_name=aws.vinitharsora.me
-export kOps_state_store=s3://csye7125-bucket
+export KOPS_STATE_STORE=s3://csye7125-bucket
+// export kOps_cluster_name=aws.harshaljaiswal.me
+// export KOPS_STATE_STORE=s3://csye7125-bucket-harshal
+// export kOps_cluster_name=aws.shrawanikarpe.me
+// export KOPS_STATE_STORE=s3://csye7125-bucket-shrawani
 export master_count="3"
 export master_volume_size="50"
 export master_instance_type="t2.medium"
@@ -50,4 +54,15 @@ kops create cluster \
 ## kOps cli commands to teardown Kubernetes Cluster on AWS
 ```shell
 kops delete cluster --name=${kOps_cluster_name} --yes
+```
+## Several useful additional commands
+```shell
+terraform init
+terraform plan
+terraform apply
+terraform destroy
+minikube start
+kubectl config view
+kubectl config use-context ${kOps_cluster_name}
+kubectl get nodes
 ```
