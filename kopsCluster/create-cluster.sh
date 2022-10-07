@@ -24,7 +24,3 @@ kops create cluster \
 --image=ami-08c40ec9ead489470 \
 --bastion=true \
 --yes
-
-sleep 60
-
-kops validate cluster --wait 30m --count 1 --name="${kOps_cluster_name}"
