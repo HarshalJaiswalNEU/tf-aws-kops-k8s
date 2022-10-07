@@ -53,7 +53,7 @@ kops create cluster \
 ```
 ## kOps cli commands to teardown Kubernetes Cluster on AWS
 ```shell
-kops delete cluster --name=${kOps_cluster_name} --yes
+kops delete cluster ${kOps_cluster_name} --yes
 ```
 ## Several useful additional commands
 ```shell
