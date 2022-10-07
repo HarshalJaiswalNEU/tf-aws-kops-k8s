@@ -4,13 +4,13 @@ source ./env.sh
 
 
 kops create cluster \
---zones="${node_zones}" \
---name="$kOps_cluster_name" \
+--name="${kOps_cluster_name}" \
 --node-count="$node_count" \
---node-size="$node_size"\
+--node-size="$node_size" \
 --node-volume-size="$node_volume" \
---master-size="$master_instance_type"\
---master-count="$master_count"\
+--zones="${node_zones}" \
+--master-size="$master_instance_type" \
+--master-count="$master_count" \
 --master-volume-size="$master_volume_size" \
 --master-zones="$master_zones" \
 --ssh-public-key="$public_key" \
@@ -20,7 +20,7 @@ kops create cluster \
 --dns-zone="$kOps_cluster_name" \
 --associate-public-ip=false \
 --topology=private \
---networking=calico \
+--networking=flannel \
 --image=ami-08c40ec9ead489470 \
 --bastion=true \
 --yes
