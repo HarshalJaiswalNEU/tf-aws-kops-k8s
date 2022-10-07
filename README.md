@@ -47,3 +47,7 @@ kops create cluster \
 --bastion=true \
 --yes
 ```
+## kOps cli commands to teardown Kubernetes Cluster on AWS
+```shell
+kops delete cluster --name=${kOps_cluster_name} --yes
+```
