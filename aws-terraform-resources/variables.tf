@@ -6,3 +6,7 @@ variable "username" {
 variable "region" {
   default = "us-east-1"
 }
+
+variable "bucketName" {
+  type = string
+}
