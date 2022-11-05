@@ -1,7 +1,5 @@
 resource "aws_s3_bucket" "b" {
-  bucket = "csye7125-bucket"
-  /* bucket = "csye7125-bucket-harshal"
-  bucket = "csye7125-bucket-shrawani" */
+  bucket = var.bucketName
 
   tags = {
     Name        = "My bucket"

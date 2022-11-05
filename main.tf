@@ -5,4 +5,5 @@ provider "aws" {
 
 module "aws-terraform-resources" {
   source = "./aws-terraform-resources"
+  bucketName = var.bucketName
 }
