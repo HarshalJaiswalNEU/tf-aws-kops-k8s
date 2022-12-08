@@ -1,3 +1,3 @@
-variable "bucketName" {
+/* variable "bucketName" {
     type = string
-}
+} */

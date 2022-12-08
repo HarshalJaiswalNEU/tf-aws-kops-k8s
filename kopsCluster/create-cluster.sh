@@ -20,7 +20,6 @@ kops create cluster \
 --dns-zone="$kOps_cluster_name" \
 --associate-public-ip=false \
 --topology=private \
---networking=flannel \
---image=ami-08c40ec9ead489470 \
+--networking=calico \
 --bastion=true \
 --yes
